@@ -1,0 +1,22 @@
+{
+  "name": "space-tourism-website-main",
+  "version": "1.0.0",
+  "description": "The Space tourism website coding challenge",
+  "scripts": {
+    "start": "parcel ./src/index.html",
+    "tech": "parcel ./src/technology-capsule.html",
+    "build": "parcel build ./src/index.html",
+    "staticFiles": {
+      "staticPath": "dist",
+      "watcherGlob": "**"
+  }
+  },
+  "author": "Kalp Chaudhary",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.4.1",
+    "parcel": "^2.4.1",
+    "parcel-plugin-static-files-copy": "^2.6.0",
+    "parcel-plugin-watch-reload": "^1.0.3"
+  }
+}

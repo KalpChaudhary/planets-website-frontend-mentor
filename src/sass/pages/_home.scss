@@ -1,0 +1,335 @@
+
+
+.header {
+  width: 100%;
+
+}
+
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  font-family: $fonts-barlow;
+  transition: overflow 0.3s;
+  transition-delay: .5s;
+
+  .desktop-navLine{
+      display: none;
+  }
+
+  &__logo{
+      max-width: 13%;
+      img{
+          width: 100%;
+      }
+  }
+
+  .menu-btn{
+      cursor: pointer;
+  }
+
+  &__links {
+
+    display:none;
+    position: absolute;
+    margin: -1.5rem;
+    right: 0rem;
+    top: 0;
+    width: 0;
+    height: 100vh;
+    color: #fff;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.2s;
+    opacity: 0;
+    z-index: 100;
+
+    &.active-display{
+        display:block;
+    }
+
+    &.active-visibility{
+        opacity: 1;
+        width:76%; 
+    }
+
+    .close-btn {
+      float: right;
+      margin-bottom: 2rem;
+      cursor: pointer;
+    }
+
+    ul {
+      display: inline-block;
+      width: 100%;
+      list-style: none;
+      line-height: 3rem;
+      font-size: 1.1rem;
+      letter-spacing:3px;
+      text-transform: uppercase;
+      font-weight: 200;
+
+      li{
+          cursor: pointer;
+          span {
+              font-weight: 500;
+              margin-right: .5rem;
+          }
+
+          a{
+              color: #fff;
+              text-decoration: none;
+          }
+      }
+    }
+  }
+
+  @media(min-width:850px){
+
+
+    .menu-btn{
+        display:none;
+    }
+  
+      &__links{
+          display: block;
+          position: relative;
+          opacity: 1;
+          height:6.1rem;
+        //   padding: .8rem;
+          width: 60%;
+          margin: -1.5rem -2rem;
+        //   margin-top: -3rem;
+
+
+          .close-btn {
+              display: none;
+          }
+      
+          ul {
+              display: flex;
+              justify-content:center;
+              align-items:center;
+              gap: 2rem;
+              height:100%;
+
+              li{
+                  transition: all 0.2s;
+                  padding:1.4rem 0;
+
+                  span{
+                      display: none;
+                  }
+              }
+
+              li.active{
+                border-bottom: 3px solid #fff;
+                color: #fff;
+              }
+
+              li:hover:not(.active){
+                border-bottom: 3px solid rgba(255, 255, 255, 0.423);
+
+              }
+          }
+      }
+  }
+
+  @media (min-width:1100px){
+    &__links{
+        margin: 0rem -2rem;
+        height:5.5rem;
+        // width: 55%;
+
+
+    }
+  }
+}
+
+@media(min-width:1100px){
+    .navbar{
+        position:relative;
+        .desktop-navLine{
+
+            position: absolute;
+            display: block;
+            width: 39%;
+            height: 2px;
+            background-color: rgba(255, 255, 255, 0.15);
+            z-index: 100000;
+            left:5rem;
+            pointer-events: none;
+        }
+    }
+}
+
+
+.main{
+    width: 100%;
+    height:100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: space-around;
+    // gap: 5rem;
+}
+
+@media(min-width:1100px){
+    .main{
+        width: 80%;
+        height: auto;
+        // text-align: left;
+        flex-direction: row;
+        margin: 0 auto;
+        align-items: center;
+        // justify-content: space-between;
+        gap: 15rem;
+        margin-top:8rem;
+    }
+    
+}
+
+.text-container{
+        color: #fff;
+        
+        &>*:not(:last-child){
+            margin-bottom:1.2rem;
+        }
+
+        h5{
+            font-size: clamp(1rem , 4vw, 1.4rem);
+            text-transform: uppercase;
+            letter-spacing:3px;
+            font-family: $fonts-barlow;
+
+        }
+
+        h5,p{
+            color: $text-light-blue;
+            font-weight: 300;
+        }
+        h1{
+            font-family: $fonts-bellefair;
+            color: $text-white;
+            font-size: clamp(5rem , 20vw, 9rem);
+            // font-size: 5rem;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        p{
+            margin:0 auto;
+            letter-spacing:1px;
+            line-height:1.5rem;
+            font-family: $fonts-roboto;
+            font-size: .95rem;
+            font-weight:300;
+            opacity: .9;
+            width: max(300px,53%);
+        }
+}
+
+@media(min-width:850px){
+
+    .text-container{
+        margin-top: 6rem;
+
+    }
+}
+@media(min-width:1100px){
+
+    .text-container{
+        margin-top: 0rem;
+        width:50%;
+        text-align:left ;
+        p{
+            text-align:left;
+            width: max(300px,90%);
+            margin: 0;
+        }
+
+        h5{
+            padding-left: 1rem;
+        }
+    }
+}
+
+.btn-container{
+    // width: clamp(9rem,10vw,15rem);
+    width: max(9rem,25%);
+    max-width:15rem;
+    aspect-ratio: 1;
+    // height: 9rem;
+    position: relative;
+    margin: 0 auto;
+    
+
+
+    .btn-explore{
+        position: relative;
+        border: none;
+        background: #fff;
+        // width: max(9rem,25%);
+        width: 100%;
+        max-width:15rem;
+        aspect-ratio: 1;
+        // height: 9rem;
+        border-radius:50%;
+        font-family:  $fonts-bellefair;
+        font-size: clamp(1.3rem,5vw,2rem);
+        text-transform: uppercase; 
+        cursor: pointer;  
+
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+    }
+
+    @media (min-width:1100px){
+        .btn-explore{
+            width:12rem;
+        }
+    }
+
+    .btn-explore::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #979797;
+        transform: scale(1.5);
+        border-radius: 50%;
+        transition: all 0.5s;
+        z-index: -1;
+        opacity: 0;
+
+    }
+
+    .btn-explore:active::before{
+        transform: scale(1);
+        opacity: 1;
+        transition: 0s;
+    }
+
+}
+
+
+@media(min-width:850px){
+    .btn-container{
+        margin-top:6rem;
+    }
+}
+@media(min-width:1100px){
+    .btn-container{
+        margin-top:0rem;
+    }
+}
+

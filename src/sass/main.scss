@@ -1,0 +1,62 @@
+//* abstracts
+@import "./abstracts/variables";
+
+//* components
+@import "./components/buttons";
+
+//* layouts
+@import "./layouts/navigation";
+
+//* pages
+@import "./pages/home";
+@import "./pages/destination";
+@import "./pages/crew";
+@import "./pages/tech";
+
+//* Animations
+@import "./animations/animate.scss";
+
+//* Fonts
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-image: url("../assets/home/background-home-mobile.jpg");
+  //   background-repeat: no-repeat;
+  //   background-attachment: fixed;
+  //   background-position: center;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 105%;
+  padding: 1.5rem;
+  width: 100%;
+  height: 100vh;
+  //   backface-visibility: hidden;
+}
+
+
+
+@media(min-width:850px){
+  body {
+    background-image: url("../assets/home/background-home-tablet.jpg");
+
+    padding: 1.5rem 2rem;
+
+  }
+}
+@media(min-width:1100px){
+  body {
+    background-image: url("../assets/home/background-home-desktop.jpg");
+
+  }
+}

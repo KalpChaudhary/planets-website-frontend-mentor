@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./sass/main.scss" />
+    <style>
+      body {
+        background-image: url("./assets/destination/background-destination-mobile.jpg");
+        background-size: 135%;
+      }
+
+      @media (min-width: 850px) {
+        body {
+          background-image: url("./assets/destination/background-destination-tablet.jpg");
+          background-size: 123%;
+        }
+      }
+      @media (min-width: 1100px) {
+        body {
+          background-image: url("./assets/destination/background-destination-desktop.jpg");
+          background-size: 103%;
+        }
+      }
+    </style>
+    <script src="app.js" defer></script>
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body>
+    <section class="header">
+      <div class="navbar">
+        <div class="desktop-navLine"></div>
+        <div class="navbar__logo">
+          <img src="./assets/shared/logo.svg" alt="logo" />
+        </div>
+        <div id="menuBtn" class="menu-btn active">
+          <img src="./assets/shared/icon-hamburger.svg" alt="menu-icon" />
+        </div>
+        <div class="navbar__links">
+          <div id="closeBtn" class="close-btn">
+            <img src="./assets/shared/icon-close.svg" alt="close-icon" />
+          </div>
+          <ul class="nav-container">
+            <li class="nav-links "><span>00</span><a href="./index.html">Home</a> </li>
+            <li class="nav-links active"><span>01</span><a href="./destination.html">Destination</a></li>
+            <li class="nav-links"><span>02</span><a href="./crew.html">Crew</a></li>
+            <li class="nav-links"><span>03</span><a href="./technology.html">Technology</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="main-destination">
+      <div class="title-container">
+        <h5><span>01</span>Pick your destination</h5>
+      </div>
+      <div class="destination">
+        <div class="destination__img">
+          <img
+            class="planet-img"
+            src="./assets/destination/image-moon.webp"
+            alt="moon img"
+          />
+        </div>
+        <div class="destination__info">
+          <ul class="destination-links">
+            <li class="active planet">
+              <a href="javascript:void(0);">Moon</a>
+            </li>
+            <li class="planet"><a href="javascript:void(0);">Mars</a></li>
+            <li class="planet"><a href="javascript:void(0);">Europa</a></li>
+            <li class="planet"><a href="javascript:void(0);">Titan</a></li>
+          </ul>
+          <h1 class="planet-name">Moon</h1>
+          <p class="planet-description">
+            See our planet as you’ve never seen it before. A perfect relaxing
+            trip away to help regain perspective and come back refreshed. While
+            you’re there, take in some history by visiting the Luna 2 and Apollo
+            11 landing sites.
+          </p>
+
+          <div class="destination__info--path">
+            <div class="distance">
+              <h5>Avg. Distance</h5>
+              <h2 class="planet-distance">384,400 KM</h2>
+            </div>
+
+            <div class="duration">
+              <h5>Est. travel time</h5>
+              <h2 class="planet-traveltime">3 days</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+
+<!-- 00 Home
+01 Destination
+02 Crew
+03 Technology
+
+01 Pick your destination
+
+Moon
+Mars
+Europa
+Titan
+
+Moon
+
+See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+regain perspective and come back refreshed. While you’re there, take in some history 
+by visiting the Luna 2 and Apollo 11 landing sites.
+
+Avg. distance
+384,400 km
+
+Est. travel time
+3 days -->

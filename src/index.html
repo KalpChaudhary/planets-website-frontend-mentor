@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./sass/main.scss" />
+    <style>
+      @media (min-width: 850px) {
+        .header {
+          margin-bottom: 5rem;
+        }
+      }
+    </style>
+    <script src="app.js" defer></script>
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body>
+    <section class="header">
+      <div class="navbar">
+        <div class="desktop-navLine"></div>
+        <div class="navbar__logo">
+          <img src="./assets/shared/logo.svg" alt="logo" />
+        </div>
+        <div id="menuBtn" class="menu-btn active">
+          <img src="./assets/shared/icon-hamburger.svg" alt="menu-icon" />
+        </div>
+        <div class="navbar__links">
+          <div id="closeBtn" class="close-btn">
+            <img src="./assets/shared/icon-close.svg" alt="close-icon" />
+          </div>
+          <ul class="nav-container">
+            <li class="nav-links active">
+              <span>00</span><a href="./index.html">Home</a>
+            </li>
+            <li class="nav-links">
+              <span>01</span><a href="./destination.html">Destination</a>
+            </li>
+            <li class="nav-links">
+              <span>02</span><a href="./crew.html">Crew</a>
+            </li>
+            <li class="nav-links">
+              <span>03</span><a href="./technology.html">Technology</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="main">
+      <div class="text-container">
+        <h5>So, you want to travel to</h5>
+        <h1>Space</h1>
+        <p>
+          Let’s face it; if you want to go to space, you might as well genuinely
+          go to outer space and not hover kind of on the edge of it. Well sit
+          back, and relax because we’ll give you a truly out of this world
+          experience!
+        </p>
+      </div>
+      <div class="btn-container">
+        <button class="btn-explore" id="btnExplore">
+          <a href="./destination.html">Explore</a>
+        </button>
+      </div>
+    </section>
+  </body>
+</html>
+
+<!-- 00 Home
+  01 Destination
+  02 Crew
+  03 Technology
+
+  So, you want to travel to
+  Space
+  Let’s face it; if you want to go to space, you might as well genuinely go to 
+  outer space and not hover kind of on the edge of it. Well sit back, and relax 
+  because we’ll give you a truly out of this world experience!
+
+  Explore -->
