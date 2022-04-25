@@ -1,5 +1,5 @@
 "use strict";
-import "regenerator-runtime/runtime";
+// import "regenerator-runtime/runtime";
 
 //? Menu active- deactive logic
 const menuBtn = document.querySelector("#menuBtn");
