@@ -1,11 +1,6 @@
 //* abstracts
 @import "./abstracts/variables";
 
-//* components
-@import "./components/buttons";
-
-//* layouts
-@import "./layouts/navigation";
 
 //* pages
 @import "./pages/home";
@@ -13,8 +8,6 @@
 @import "./pages/crew";
 @import "./pages/tech";
 
-//* Animations
-@import "./animations/animate.scss";
 
 //* Fonts
 @import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
