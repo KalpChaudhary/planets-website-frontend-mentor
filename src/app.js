@@ -1,5 +1,5 @@
 "use strict";
-// import "regenerator-runtime/runtime";
+import "regenerator-runtime/runtime";
 
 //? Menu active- deactive logic
 const menuBtn = document.querySelector("#menuBtn");
@@ -147,8 +147,10 @@ let techId = 0;
 
 const fetchData = async function () {
   try {
-    const rawData = await fetch("./data.json");
-    return await rawData.json();
+    // const rawData = await fetch("./data.json");
+    const rawData = await import("./data.json");
+    // return await rawData.json();
+    return rawData;
   } catch (err) {
     console.log(err);
   }
@@ -219,3 +221,25 @@ async function changeImages(x, id = techId) {
 
 changeImages(windowWidth,techId);
 windowWidth.addListener(changeImages);
+
+
+
+const fetchDataTemp = async function () {
+  try {
+    const rawData = await import("./data.json");
+    console.log(rawData);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+fetchDataTemp()
+
+// const dataTemp = async function () {
+
+//   const data = await fetchDataTemp();
+//   console.log(data);
+// }
+
+// dataTemp();
+
