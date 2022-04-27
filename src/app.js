@@ -1,7 +1,7 @@
 "use strict";
 // import "regenerator-runtime/runtime";
 
-import rawData from "./data.json"
+// import rawData from "./data.json"
 // console.log(rawData);
 
 //? Menu active- deactive logic
@@ -151,7 +151,7 @@ let techId = 0;
 const fetchData = async function () {
   try {
     // const rawData = await fetch("./data.json");
-    // // const rawData = await import("./data.json");
+    const rawData = await import("./data.json");
     // return await rawData.json();
     return rawData;
   } catch (err) {
