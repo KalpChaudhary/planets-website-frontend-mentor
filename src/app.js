@@ -1,5 +1,8 @@
 "use strict";
-// import "regenerator-runtime/runtime";
+import "regenerator-runtime/runtime";
+
+import rawData from "./data.json"
+// console.log(rawData);
 
 //? Menu active- deactive logic
 const menuBtn = document.querySelector("#menuBtn");
@@ -148,7 +151,7 @@ let techId = 0;
 const fetchData = async function () {
   try {
     // const rawData = await fetch("./data.json");
-    const rawData = await import("./data.json");
+    // // const rawData = await import("./data.json");
     // return await rawData.json();
     return rawData;
   } catch (err) {
@@ -161,9 +164,11 @@ const fetchData = async function () {
 async function changePlanetData(e) {
   const curretEl = e.target.innerHTML;
   const { destinations: destination } = await fetchData();
+  // const { destinations: destination } = fetchData();
 
   destination.filter((el) => {
     if (el.name === curretEl) {
+      // console.log(el);
       planetName.innerHTML = el.name;
       planetImg.src = el.images.png;
       planetInfo.innerHTML = el.description;
@@ -224,16 +229,16 @@ windowWidth.addListener(changeImages);
 
 
 
-const fetchDataTemp = async function () {
-  try {
-    const rawData = await import("./data.json");
-    console.log(rawData);
-  } catch (err) {
-    console.log(err);
-  }
-};
+// const fetchDataTemp = async function () {
+//   try {
+//     const rawData = await import("./data.json");
+//     console.log(rawData);
+//   } catch (err) {
+//     console.log(err);
+//   }
+// };
 
-fetchDataTemp()
+// fetchDataTemp()
 
 // const dataTemp = async function () {
 
