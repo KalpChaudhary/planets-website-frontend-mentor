@@ -4,7 +4,7 @@
 // import rawData from "./data.json"
 // console.log(rawData);
 
-import destinationImages from "./assets/destination/*.png";
+import destinationImages from "./assets/destination/*.**";
 
 console.log(destinationImages);
 
