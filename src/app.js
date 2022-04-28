@@ -1,8 +1,12 @@
 "use strict";
-// import "regenerator-runtime/runtime";
+import "regenerator-runtime/runtime";
 
 // import rawData from "./data.json"
 // console.log(rawData);
+
+import destinationImages from "./assets/destination/*.png";
+
+console.log(destinationImages);
 
 //? Menu active- deactive logic
 const menuBtn = document.querySelector("#menuBtn");
@@ -150,10 +154,10 @@ let techId = 0;
 
 const fetchData = async function () {
   try {
-    // const rawData = await fetch("./data.json");
-    // return await rawData.json();
-    const rawData = await import("./data.json");
-    return rawData;
+    const rawData = await fetch("./data.json");
+    return await rawData.json();
+    // const rawData = await import("./data.json");
+    // return rawData;
   } catch (err) {
     console.log(err);
   }
@@ -168,9 +172,13 @@ async function changePlanetData(e) {
 
   destination.filter((el) => {
     if (el.name === curretEl) {
+      const destImg = el.name.toLowerCase();
+      console.log(destImg)
+      console.log(destinationImages[`image-${destImg}`]);
       // console.log(el);
       planetName.innerHTML = el.name;
-      planetImg.src = el.images.png;
+      planetImg.src = `${destinationImages[`image-${destImg}`]}`;
+      // planetImg.src = el.images.png;
       planetInfo.innerHTML = el.description;
       planetDistance.innerHTML = el.distance;
       planetDuration.innerHTML = el.travel;
