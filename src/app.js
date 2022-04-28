@@ -150,10 +150,10 @@ let techId = 0;
 
 const fetchData = async function () {
   try {
-    const rawData = await fetch("./data.json");
-    return await rawData.json();
-    // const rawData = await import("./data.json");
-    // return rawData;
+    // const rawData = await fetch("./data.json");
+    // return await rawData.json();
+    const rawData = await import("./data.json");
+    return rawData;
   } catch (err) {
     console.log(err);
   }
