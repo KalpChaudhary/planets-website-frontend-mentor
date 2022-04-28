@@ -7,7 +7,7 @@
     "tech": "parcel ./src/technology-capsule.html",
     "build": "parcel build ./src/index.html",
     "staticFiles": {
-      "staticPath": "dist",
+      "staticPath": ["./src/data.json" , "./src/assets"],
       "watcherGlob": "**"
   }
   },
